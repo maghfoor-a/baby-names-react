@@ -24,7 +24,7 @@ export default function MainContent(): JSX.Element {
 
   return (
     <>
-      <p>This is where baby names data will go eg:</p>
+      <p>This is where baby names data will go:</p>
       <div className="namesList">
         <p> {allTheNames} </p>
       </div>
