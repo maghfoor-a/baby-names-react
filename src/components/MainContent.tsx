@@ -8,8 +8,19 @@ export default function MainContent(): JSX.Element {
   }
 
   const allTheNames = babyNamesData.map((babyData: babyDataTypes) => {
-    return <p key={babyData.id}>{babyData.name}</p>;
+    return (
+      <button key={babyData.id} className={babyData.sex}>
+        {babyData.name}
+      </button>
+    );
   });
+  //   const femaleNames = babyNamesData.map((babyData: babyDataTypes) => {
+  //     let name = "";
+  //     if (babyData.sex === "f") {
+  //         name = babyData.name
+  //     }
+  //     return <p key={babyData.id}>{name}</p>
+  //   })
 
   return (
     <>
