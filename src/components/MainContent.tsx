@@ -7,7 +7,9 @@ export default function MainContent(): JSX.Element {
     sex: string;
   }
 
-  const allTheNames = babyNamesData.map((babyData: babyDataTypes) => {
+  const allTheNames = babyNamesData
+  .sort((a, b) => a.name > b.name ? 1 : -1)
+  .map((babyData: babyDataTypes) => {
     return (
       <button key={babyData.id} className={babyData.sex}>
         {babyData.name}
