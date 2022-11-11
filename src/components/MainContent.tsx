@@ -1,4 +1,5 @@
 import babyNamesData from "../data/babyNamesData.json";
+import "./MainContentStyles.css"
 
 export default function MainContent(): JSX.Element {
   interface babyDataTypes {
@@ -11,9 +12,11 @@ export default function MainContent(): JSX.Element {
   .sort((a, b) => a.name > b.name ? 1 : -1)
   .map((babyData: babyDataTypes) => {
     return (
-      <button key={babyData.id} className={babyData.sex}>
-        {babyData.name}
-      </button>
+        <>
+            <button key={babyData.id} className={babyData.sex}>
+                {babyData.name}
+            </button>
+        </>
     );
   });
   //   const femaleNames = babyNamesData.map((babyData: babyDataTypes) => {
@@ -25,11 +28,12 @@ export default function MainContent(): JSX.Element {
   //   })
 
   return (
-    <>
-      <p>This is where baby names data will go:</p>
-      <div className="namesList">
-        <p> {allTheNames} </p>
+    <body id="body">
+        <div className="wrapper">
+        <div className="namesList">
+            <p> {allTheNames} </p>
+        </div>
       </div>
-    </>
+    </body>
   );
 }
