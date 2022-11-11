@@ -15,7 +15,7 @@
 }
 
 .namesList {
-  max-width: 70%;
+  max-width: 80%;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -23,4 +23,6 @@
 
 .wrapper {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
