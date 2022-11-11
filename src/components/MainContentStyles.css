@@ -1,28 +1,26 @@
 .f {
-    background-color: #64908a;
-    color: aliceblue;
-    font-size: x-large;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 5px;
-    
-    
+  background-color: #64908a;
+  color: aliceblue;
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+  margin: 5px;
 }
 
 .m {
-    background-color: #cc2a41;
-    color: aliceblue;
-    font-size: x-large;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 5px;
+  background-color: #cc2a41;
+  color: aliceblue;
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+  margin: 5px;
 }
 
 .namesList {
-    max-width: 70%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+  max-width: 70%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .wrapper {
-    width: 100%;
+  width: 100%;
 }

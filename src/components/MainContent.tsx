@@ -1,5 +1,5 @@
 import babyNamesData from "../data/babyNamesData.json";
-import "./MainContentStyles.css"
+import "./MainContentStyles.css";
 
 export default function MainContent(): JSX.Element {
   interface babyDataTypes {
@@ -9,16 +9,16 @@ export default function MainContent(): JSX.Element {
   }
 
   const allTheNames = babyNamesData
-  .sort((a, b) => a.name > b.name ? 1 : -1)
-  .map((babyData: babyDataTypes) => {
-    return (
+    .sort((a, b) => (a.name > b.name ? 1 : -1))
+    .map((babyData: babyDataTypes) => {
+      return (
         <>
-            <button key={babyData.id} className={babyData.sex}>
-                {babyData.name}
-            </button>
+          <button key={babyData.id} className={babyData.sex}>
+            {babyData.name}
+          </button>
         </>
-    );
-  });
+      );
+    });
   //   const femaleNames = babyNamesData.map((babyData: babyDataTypes) => {
   //     let name = "";
   //     if (babyData.sex === "f") {
@@ -29,9 +29,9 @@ export default function MainContent(): JSX.Element {
 
   return (
     <body id="body">
-        <div className="wrapper">
+      <div className="wrapper">
         <div className="namesList">
-            <p> {allTheNames} </p>
+          <p> {allTheNames} </p>
         </div>
       </div>
     </body>
