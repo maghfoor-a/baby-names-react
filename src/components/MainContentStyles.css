@@ -3,7 +3,8 @@
   color: aliceblue;
   font-size: x-large;
   font-family: "Courier New", Courier, monospace;
-  margin: 5px;
+  margin: 3px;
+  border-radius: 5px;
 }
 
 .m {
@@ -11,7 +12,8 @@
   color: aliceblue;
   font-size: x-large;
   font-family: "Courier New", Courier, monospace;
-  margin: 5px;
+  margin: 3px;
+  border-radius: 5px;
 }
 
 .namesList {
