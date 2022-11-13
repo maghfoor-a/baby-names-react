@@ -3,7 +3,6 @@ import "./MainContentStyles.css";
 import { useState } from "react";
 
 export default function MainContent(): JSX.Element {
-
   const [text, setText] = useState("");
 
   interface babyDataTypes {
@@ -25,19 +24,18 @@ export default function MainContent(): JSX.Element {
       );
     });
 
-
-    
-
   return (
     <>
       <>
-            <input className="searchBar" value={text}
-            onChange={(event) => {
-                setText(event.target.value)
-            }}
-            />
-        </>
-      <hr/>
+        <input
+          className="searchBar"
+          value={text}
+          onChange={(event) => {
+            setText(event.target.value);
+          }}
+        />
+      </>
+      <hr />
       <div className="wrapper">
         <div className="namesList">
           <p> {allTheNames} </p>
