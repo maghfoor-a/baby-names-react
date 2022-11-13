@@ -13,7 +13,9 @@ export default function MainContent(): JSX.Element {
 
   const allTheNames = babyNamesData
     .sort((a, b) => (a.name > b.name ? 1 : -1))
-    .filter((babyData: babyDataTypes) => babyData.name.includes(`${text}`))
+    .filter((babyData: babyDataTypes) =>
+      babyData.name.toLocaleLowerCase().includes(`${text.toLocaleLowerCase()}`)
+    )
     .map((babyData: babyDataTypes) => {
       return (
         <>
@@ -26,7 +28,7 @@ export default function MainContent(): JSX.Element {
 
   return (
     <>
-      <>
+      <div className="searchBarWrapper">
         <input
           className="searchBar"
           value={text}
@@ -34,9 +36,9 @@ export default function MainContent(): JSX.Element {
             setText(event.target.value);
           }}
         />
-      </>
+      </div>
       <hr />
-      <div className="wrapper">
+      <div className="namesWrapper">
         <div className="namesList">
           <p> {allTheNames} </p>
         </div>

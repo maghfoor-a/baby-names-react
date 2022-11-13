@@ -23,8 +23,29 @@
   justify-content: center;
 }
 
-.wrapper {
+.namesWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.searchBarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 60px;
+}
+
+.searchBarWrapper input {
+  font-family: Courier New, Courier, "monospace";
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px 20px;
 }
