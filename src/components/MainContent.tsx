@@ -1,7 +1,11 @@
 import babyNamesData from "../data/babyNamesData.json";
 import "./MainContentStyles.css";
+import { useState } from "react";
 
 export default function MainContent(): JSX.Element {
+
+  const [text, setText] = useState("");
+
   interface babyDataTypes {
     id: number;
     name: string;
@@ -10,6 +14,7 @@ export default function MainContent(): JSX.Element {
 
   const allTheNames = babyNamesData
     .sort((a, b) => (a.name > b.name ? 1 : -1))
+    .filter((babyData: babyDataTypes) => babyData.name.includes(`${text}`))
     .map((babyData: babyDataTypes) => {
       return (
         <>
@@ -19,21 +24,25 @@ export default function MainContent(): JSX.Element {
         </>
       );
     });
-  //   const femaleNames = babyNamesData.map((babyData: babyDataTypes) => {
-  //     let name = "";
-  //     if (babyData.sex === "f") {
-  //         name = babyData.name
-  //     }
-  //     return <p key={babyData.id}>{name}</p>
-  //   })
+
+
+    
 
   return (
-    <body id="body">
+    <>
+      <>
+            <input className="searchBar" value={text}
+            onChange={(event) => {
+                setText(event.target.value)
+            }}
+            />
+        </>
+      <hr/>
       <div className="wrapper">
         <div className="namesList">
           <p> {allTheNames} </p>
         </div>
       </div>
-    </body>
+    </>
   );
 }
