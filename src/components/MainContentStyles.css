@@ -6,6 +6,11 @@
   margin: 3px;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
 }
 
 .m {
@@ -16,6 +21,27 @@
   margin: 3px;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.m:hover,
+.m:focus,
+.m:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.f:hover,
+.f:focus,
+.f:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .namesList {
